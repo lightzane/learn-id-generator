@@ -7,21 +7,21 @@ export const API_TAGS = {
 };
 
 export const API_OPERATION = {
-    get Uuid(): Partial<ApiOperationOptions> {
+    get Uuid(): ApiOperationOptions {
         return {
             summary: 'returns uuid',
             description: 'Generates a universal unique identifer (v4) and returns it as a string'
         };
     },
 
-    get ObjectId(): Partial<ApiOperationOptions> {
+    get ObjectId(): ApiOperationOptions {
         return {
             summary: 'returns ObjectId or MongoId',
             description: 'Generates a BSON ObjectID or MongoID and returns it as a string'
         };
     },
 
-    get ObjectIdTimestamp(): Partial<ApiOperationOptions> {
+    get ObjectIdTimestamp(): ApiOperationOptions {
         return {
             description: 'Retrieves the timestamp when the ObjectID was generated'
         };
@@ -29,7 +29,7 @@ export const API_OPERATION = {
 };
 
 export const API_BODY = {
-    get ObjectIdTimestamp(): Partial<ApiBodyOptions> {
+    get ObjectIdTimestamp(): ApiBodyOptions {
         return {
             schema: {
                 example: getMockInput()
