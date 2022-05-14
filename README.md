@@ -11,7 +11,7 @@ npm run start:dev
 
 ## How this Project was Created
 
-Using `@nestjs/cli` [](https://img.shields.io/badge/nest-8.2.5-red)
+Using `@nestjs/cli` ![](https://img.shields.io/badge/nest-8.2.5-red)
 
 1. `nest new learn-id-generator`
 2. `npm i uuid bson-objectid`
