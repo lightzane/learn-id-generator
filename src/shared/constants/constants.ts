@@ -1,5 +1,5 @@
 import { ApiBodyOptions, ApiOperationOptions } from "@nestjs/swagger";
-import { getMockInput } from "../../mocks/mock-input";
+import { getMockInput } from "../mocks/mock-input";
 
 export const API_TAGS = {
     Generators: 'generators',

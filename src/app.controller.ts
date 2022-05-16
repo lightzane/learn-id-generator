@@ -1,9 +1,8 @@
 import { Body, Controller, Get, Post } from '@nestjs/common';
-import { ApiBody, ApiOperation, ApiTags } from '@nestjs/swagger';
 import { AppService } from './app.service';
 import { v4 as uuidv4 } from 'uuid';
-import { API_BODY, API_OPERATION, API_TAGS } from './shared/constants/constants';
 import ObjectID from 'bson-objectid';
+import { SwaggerObjectId, SwaggerObjectIdTimestamp, SwaggerUuid } from './shared/decorators/swagger.decorator';
 
 @Controller()
 export class AppController {
@@ -14,23 +13,19 @@ export class AppController {
     return this.appService.getHello();
   }
 
-  @ApiTags(API_TAGS.Generators)
-  @ApiOperation(API_OPERATION.Uuid)
+  @SwaggerUuid()
   @Get('uuid')
   getUuid(): string {
     return uuidv4();
   }
 
-  @ApiTags(API_TAGS.Generators)
-  @ApiOperation(API_OPERATION.ObjectId)
+  @SwaggerObjectId()
   @Get('objectid')
   getObjectId(): string {
     return ObjectID().toHexString();
   }
 
-  @ApiTags(API_TAGS.Utilities)
-  @ApiOperation(API_OPERATION.ObjectIdTimestamp)
-  @ApiBody(API_BODY.ObjectIdTimestamp)
+  @SwaggerObjectIdTimestamp()
   @Post('objectid/timestamp')
   getObjectIdTimestamp(@Body('objectId') objectId: string): any {
     return ObjectID(objectId).getTimestamp();
