@@ -2,6 +2,8 @@
 
 This project uses [Nest Application](https://nestjs.com/) as backend API to generate `UUID` (**uuid**) and `ObjectID` (**bson-objectid**)
 
+**Or Generate your Own** : https://github.com/lightzane/learn-objectid-uuid
+
 ## Getting Started
 
 ```
@@ -21,6 +23,12 @@ Using `@nestjs/cli` ![](https://img.shields.io/badge/nest-8.2.5-red)
 
 - `uuid` (https://www.npmjs.com/package/uuid)
 - `bson-objectid` (https://www.npmjs.com/package/bson-objectid)
+
+## Others
+
+**Generate your own uuid and objectId**
+
+- https://github.com/lightzane/learn-objectid-uuid
 
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
